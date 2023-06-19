@@ -1,0 +1,23 @@
+public abstract class CaffeineBeverage extends Beverage {
+    boolean hasMilk;
+    String size;
+    int extraPrice = 0;
+
+    public CaffeineBeverage(boolean hasMilk, String size) {
+        super(hasMilk, size);
+
+        if (size == "Medium") {
+            extraPrice += 1;
+        } else if (size == "Large") {
+            extraPrice += 2;
+        }
+
+        if (hasMilk) {
+            extraPrice += 1;
+        }
+    }
+    @Override
+    public String getKind(){
+        return "Milk";
+    }
+}

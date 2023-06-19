@@ -1,0 +1,19 @@
+public abstract class Beverage {
+
+    public static String SMALL = "Small";
+    public static String MEDIUM = "Medium";
+    public static String LARGE = "Large";
+
+    public abstract int orderCost();
+    public abstract String getKind();
+
+    public boolean extra;
+    public String size;
+
+    public Beverage(boolean extra, String size) {
+        this.extra = extra;
+        this.size = size;
+    }
+
+    public abstract String getName();
+}

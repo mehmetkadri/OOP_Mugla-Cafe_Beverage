@@ -1,0 +1,15 @@
+public class Order {
+    int totalCost = 0;
+    String orderInfo = "";
+    public void add(OrderItem orderItem){
+        totalCost += orderItem.getTotalCost();
+        orderInfo+=(Integer.toString(orderItem.getHowMany())+" "+orderItem.beverage.size+" "+orderItem.beverage.getName()+" "+(orderItem.beverage.extra? "with" : "without")+" "+ orderItem.beverage.getKind()+" "+orderItem.getTotalCost()+" "+"TL"+"\n");
+
+    }
+
+    public String toString(){
+        System.out.println(orderInfo);
+        System.out.println("TOTAL : "+ totalCost + " TL");
+        return "\n";
+    }
+}

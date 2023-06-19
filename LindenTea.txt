@@ -1,0 +1,19 @@
+public class LindenTea extends TeaBeverage {
+    boolean hasLemon;
+    String size;
+    int priceLindenTea = 5;
+
+    public LindenTea(boolean hasLemon, String size){
+        super(hasLemon, size);
+    }
+
+    @Override
+    public int orderCost(){
+        return extraPrice+priceLindenTea;
+    }
+
+    @Override
+    public String getName(){
+        return "Linden Tea";
+    }
+}

@@ -1,0 +1,18 @@
+public class OrderItem{
+    int totalCost = 0;
+    private int howMany;
+    Beverage beverage;
+    public OrderItem(Beverage beverage, int howMany){
+        this.beverage = beverage;
+        this.howMany = howMany;
+        totalCost=beverage.orderCost()*howMany;
+    }
+
+    public int getTotalCost(){
+        return totalCost;
+    }
+
+    public int getHowMany() {
+        return howMany;
+    }
+}

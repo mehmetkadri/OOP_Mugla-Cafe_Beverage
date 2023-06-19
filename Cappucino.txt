@@ -1,0 +1,19 @@
+public class Cappucino extends CaffeineBeverage {
+    boolean hasMilk;
+    String size;
+    int priceCappucino = 6;
+
+    public Cappucino(boolean hasMilk, String size){
+        super(hasMilk, size);
+    }
+
+    @Override
+    public int orderCost(){
+        return extraPrice+priceCappucino;
+    }
+
+    @Override
+    public String getName(){
+        return "Cappucino";
+    }
+}

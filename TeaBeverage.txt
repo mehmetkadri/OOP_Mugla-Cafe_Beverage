@@ -1,0 +1,23 @@
+public abstract class TeaBeverage extends Beverage {
+    boolean hasLemon;
+    String size;
+    int extraPrice = 0;
+
+    public TeaBeverage(boolean hasLemon, String size) {
+        super(hasLemon, size);
+
+        if (size == "Medium") {
+            extraPrice += 1;
+        } else if (size == "Large") {
+            extraPrice += 2;
+        }
+
+        if (hasLemon) {
+            extraPrice += 1;
+        }
+    }
+    @Override
+    public String getKind(){
+        return "Lemon";
+    }
+}
